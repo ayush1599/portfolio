@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Dutta | Data-Driven Marketing & Analytics Lead</title>
+    <meta name="description" content="Data-driven marketer, product builder, and analytics lead at Zeta Global. Designing tools that merge data science, automation, and creativity.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ayush Dutta | Data-Driven Marketing & Analytics Lead">
+    <meta property="og:description" content="Data-driven marketer, product builder, and analytics lead at Zeta Global.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ayush Dutta | Data-Driven Marketing & Analytics Lead">
+    <meta name="twitter:description" content="Data-driven marketer, product builder, and analytics lead at Zeta Global.">
+
+    <!-- Fonts - Inter (shadcn default) + Monda -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Monda:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* shadcn color system */
+        :root {
+            --background: 214 32% 96%;
+            --foreground: 222.2 84% 4.9%;
+
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+
+            --popover: 0 0% 100%;
+            --popover-foreground: 222.2 84% 4.9%;
+
+            --primary: 262.1 83.3% 47.8%;
+            --primary-foreground: 210 40% 98%;
+
+            --secondary: 210 40% 96.1%;
+            --secondary-foreground: 222.2 47.4% 11.2%;
+
+            --muted: 210 40% 96.1%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+
+            --accent: 210 40% 96.1%;
+            --accent-foreground: 222.2 47.4% 11.2%;
+
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 210 40% 98%;
+
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 262.1 83.3% 57.8%;
+
+            --radius: 0.5rem;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('image copy.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: hsl(var(--foreground));
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header/Navigation - shadcn style */
+        header {
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            background: hsl(0 0% 100% / 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+            border-bottom: 1px solid hsl(var(--border));
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3.5rem;
+            position: relative;
+        }
+
+        .logo {
+            font-family: 'Monda', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: hsl(var(--foreground));
+            letter-spacing: -0.025em;
+            position: absolute;
+            left: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #6B7280;
+            text-decoration: none;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: hsl(var(--primary));
+        }
+
+        nav a.active {
+            color: hsl(var(--primary));
+        }
+
+        /* Hero Section - shadcn style */
+        .hero {
+            padding: 6rem 0 4rem;
+        }
+
+        .hero-content {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 48rem;
+        }
+
+        .hero-image {
+            flex-shrink: 0;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid hsl(var(--primary));
+            background: hsl(var(--muted));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-left: auto;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .hero-image-placeholder {
+            color: hsl(var(--muted-foreground));
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .gradient-text {
+            background: linear-gradient(to right, hsl(var(--primary)), hsl(262.1 83% 57%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            padding-right: 2px;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: #374151;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        /* shadcn Button */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+            padding: 0.625rem 1.5rem;
+            height: 2.5rem;
+        }
+
+        .btn-primary:hover {
+            background: hsl(262.1 83% 52%);
+        }
+
+        .btn-outline {
+            border: 1px solid hsl(var(--input));
+            background: hsl(0 0% 100%);
+            color: hsl(var(--foreground));
+            padding: 0.625rem 1.5rem;
+            height: 2.5rem;
+        }
+
+        .btn-outline:hover {
+            background: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-description {
+            color: #374151;
+            font-size: 1rem;
+        }
+
+        /* shadcn Card Component */
+        .card {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+            border-color: hsl(var(--primary) / 0.3);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+            border-color: hsl(var(--primary) / 0.3);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .project-link {
+            color: hsl(var(--primary));
+            font-size: 0.8125rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.5rem 0.875rem;
+            border-radius: 9999px;
+            border: 1px solid hsl(var(--primary));
+            background: hsl(0 0% 100%);
+            transition: all 0.2s ease;
+            font-weight: 500;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .project-link:hover {
+            background: hsl(var(--primary));
+            color: hsl(0 0% 100%);
+            border-color: hsl(var(--primary));
+        }
+
+        .project-link::after {
+            content: "↗";
+            font-size: 0.75rem;
+        }
+
+        .project-description {
+            color: #374151;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        /* shadcn Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            border-radius: calc(var(--radius) - 2px);
+            padding: 0.25rem 0.625rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .badge-secondary {
+            background: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+            border-color: hsl(var(--border));
+        }
+
+        .badge-outline {
+            color: hsl(var(--foreground));
+            border: 1px solid hsl(var(--border));
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* Timeline - shadcn style */
+        .timeline {
+            max-width: 48rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            bottom: 4.3rem;
+            width: 1px;
+            background: hsl(var(--border));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.75rem;
+            top: 0.5rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background: hsl(var(--primary));
+            border: 2px solid hsl(var(--background));
+            box-shadow: 0 0 0 2px hsl(var(--border));
+        }
+
+        .timeline-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .timeline-period {
+            color: #374151;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .timeline-company {
+            color: #374151;
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-description {
+            color: #374151;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            background: hsl(222.2 84% 4.9%);
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-title {
+            color: hsl(0 0% 100%);
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .footer-link {
+            color: hsl(0 0% 70%);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-link:hover {
+            color: hsl(var(--primary));
+        }
+
+        footer p {
+            color: hsl(0 0% 60%);
+            font-size: 0.875rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .project-card {
+                padding: 1.5rem;
+            }
+
+            .project-title {
+                font-size: 1.125rem;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Link arrow animation */
+        .project-link::after {
+            transition: transform 0.2s ease;
+        }
+
+        .project-link:hover::after {
+            transform: translate(1px, -1px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Ayush Dutta</div>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>
+                        AdTech Products & <span class="gradient-text">Analytics</span>
+                    </h1>
+                    <p class="hero-description">
+                        I'm Ayush Dutta, a lead analyst at Zeta Global with a deep interest in AdTech and AI-driven products. I've built automation tools that streamline analytics workflows, reduce operational friction, and enable faster decision-making across programmatic campaigns.<br>I also created everythingadtech.com, an AI-powered news aggregator that curates, summarizes, and organizes the latest developments across advertising, data, and tech, designed for professionals who want to stay ahead without the clutter.
+                    </p>
+                    <div style="display: flex; gap: 0.75rem;">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#experience" class="btn btn-outline">Experience</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="image.png" alt="Ayush Dutta">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">Tools and platforms I've built to solve real-world problems in analytics and marketing</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Zeta Analytics Query Generator</h3>
+                        <a href="https://zeta-analytics-query-generator.netlify.app" target="_blank" class="project-link">View Project</a>
+                    </div>
+                    <p class="project-description">
+                        A parameterized query builder that generates SQL queries based on user-inputted parameters and executes them directly. It also includes a ZIGS and data transfer module that automates source-to-destination ZIGS creation and streamlines the entire data transfer process.
+                    </p>
+                    <div class="project-tags">
+                        <span class="badge badge-secondary">SQL</span>
+                        <span class="badge badge-secondary">Automation</span>
+                        <span class="badge badge-secondary">Analytics</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Everything AdTech</h3>
+                        <a href="https://everythingadtech.com" target="_blank" class="project-link">View Project</a>
+                    </div>
+                    <p class="project-description">
+                        A platform that aggregates all AdTech and MarTech news. It organizes updates from hundreds of sources in one place. Each article includes an AI-generated summary for quick consumption.
+                    </p>
+                    <div class="project-tags">
+                        <span class="badge badge-secondary">AI</span>
+                        <span class="badge badge-secondary">Education</span>
+                        <span class="badge badge-secondary">Ad Tech</span>
+                        <span class="badge badge-secondary">Content</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Issue Estimator</h3>
+                        <a href="https://issue-estimator-gray.vercel.app" target="_blank" class="project-link">View Project</a>
+                    </div>
+                    <p class="project-description">
+                        An AI-based estimator that predicts complexity, effort, and delivery timelines for development tasks, improving sprint planning accuracy across engineering teams.
+                    </p>
+                    <div class="project-tags">
+                        <span class="badge badge-secondary">AI</span>
+                        <span class="badge badge-secondary">Project Management</span>
+                        <span class="badge badge-secondary">Estimation</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Tutorial Generator</h3>
+                        <a href="https://tutorial-generator-gray.vercel.app" target="_blank" class="project-link">View Project</a>
+                    </div>
+                    <p class="project-description">
+                        A documentation-to-tutorial generator that scans project docs and produces structured tutorial outlines with learning paths for faster contributor onboarding.
+                    </p>
+                    <div class="project-tags">
+                        <span class="badge badge-secondary">Documentation</span>
+                        <span class="badge badge-secondary">Automation</span>
+                        <span class="badge badge-secondary">AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-description">My professional journey in Product and Analytics</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Lead Analyst</h3>
+                        <span class="timeline-period">2024 – Present</span>
+                    </div>
+                    <div class="timeline-company">Zeta Global</div>
+                    <p class="timeline-description">
+                        Built a query automation tool that cut analyst time by 60% and developed an LLM-based system that analyzes first-party data to recommend high-value audience segments. Created forecasting models for key KPIs, automated survey-lift processing with integrated APIs, and built omnichannel analysis frameworks that incorporate impression sequencing. Also developed scripts to compute website performance metrics using universal pixel data.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Founder & Developer</h3>
+                        <span class="timeline-period">2025 – Present</span>
+                    </div>
+                    <div class="timeline-company">EverythingAdTech</div>
+                    <p class="timeline-description">
+                        Created and scaled a programmatic advertising education hub with 1,000+ daily users. Designed backend automation for real-time news aggregation and scheduling.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Senior Analyst</h3>
+                        <span class="timeline-period">2023 – 2024</span>
+                    </div>
+                    <div class="timeline-company">MiQ</div>
+                    <p class="timeline-description">
+                        Developed targeting and dashboarding solutions leveraging APIs and contextual matching, boosting YouTube VTR by 12% and optimizing B2B client outreach.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Analyst</h3>
+                        <span class="timeline-period">2021 – 2023</span>
+                    </div>
+                    <div class="timeline-company">MiQ</div>
+                    <p class="timeline-description">
+                        Automated campaign snapshot reporting (saving 80% time), delivered insights driving $115K upsell, and developed DSP/DCM discrepancy tools saving $9K.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Business Analyst Intern</h3>
+                        <span class="timeline-period">2021</span>
+                    </div>
+                    <div class="timeline-company">MiQ</div>
+                    <p class="timeline-description">
+                        Built pacing and KPI tracking tools that enhanced campaign monitoring and led to $250K in upweights.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div style="text-align: center;">
+                    <h3 class="footer-title">Get in Touch</h3>
+                    <div class="footer-links">
+                        <a href="mailto:duttaayush98@gmail.com" class="footer-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                            duttaayush98@gmail.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/ayush-dutta-61521058" target="_blank" class="footer-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
